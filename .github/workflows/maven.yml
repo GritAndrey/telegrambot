@@ -23,6 +23,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: add bot credentials
+#      https://stackoverflow.com/questions/57720484/how-to-import-private-data-with-github-actions
       run: |
         echo 'bot.token=${{ secrets.BOT_TOKEN }}' >> ./src/main/resources/application.properties
         echo 'bot.name=${{ secrets.BOT_NAME }}' >> ./src/main/resources/application.properties
