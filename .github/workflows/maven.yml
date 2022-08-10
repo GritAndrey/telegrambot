@@ -22,9 +22,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: create bot token
-      run: echo 'bot.token=${{ secrets.BOT_TOKEN }}' > ./src/main/resources/application.properties
-    - name: create bot name
-      run: echo 'bot.name=${{ secrets.BOT_NAME }}' > ./src/main/resources/application.properties
+    - name: add bot credentials
+      run: |
+        echo 'bot.token=${{ secrets.BOT_TOKEN }}' >> ./src/main/resources/application.properties
+        echo 'bot.name=${{ secrets.BOT_NAME }}' >> ./src/main/resources/application.properties
+        cat ./src/main/resources/application.properties
+        ls
     - name: Build with Maven
       run: mvn -B package --file pom.xml
