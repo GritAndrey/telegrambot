@@ -10,7 +10,7 @@
     </parent>
     <groupId>ru.gritandrey</groupId>
     <artifactId>telegrambot</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.2.0-SNAPSHOT</version>
     <name>TelegramBot</name>
     <description>Telegram bot playground</description>
 
@@ -21,6 +21,7 @@
 
         <telegrambots-spring-boot-starter.version>6.1.0</telegrambots-spring-boot-starter.version>
         <spring-boot-maven-plugin.version>2.7.2</spring-boot-maven-plugin.version>
+        <lombok.version>1.18.24</lombok.version>
     </properties>
 
     <dependencies>
@@ -44,7 +45,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>${lombok.version}</version>
         </dependency>
     </dependencies>
 
